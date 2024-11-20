@@ -24,6 +24,14 @@ build.gradle에 위의 의존성을 추가한다.
 위 어노테이션을 서비스의 mainClass 위에 추가한다
 ![image](https://github.com/user-attachments/assets/6440cbfc-1f52-4d6f-b1cb-0c8d6f4b9a94)
 <br/>
+```
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2022.0.3"
+	}
+}
+```
+만약 어노테이션 추가가 되지 않는다면 build.gradle에 위 코드를 추가한다. (모르겠으면 이현숙 부르기)
 그러면 이제 사전 준비 끝!
 
 
