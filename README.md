@@ -32,6 +32,9 @@ dependencyManagement {
 }
 ```
 만약 어노테이션 추가가 되지 않는다면 build.gradle에 위 코드를 추가한다. (모르겠으면 이현숙 부르기)
+
+만약 application.yml과 application.properties가 둘 다 있다면 둘 모두에 application name을 정의해주어야한다.
+
 그러면 이제 사전 준비 끝!
 
 
