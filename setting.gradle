@@ -1,0 +1,3 @@
+rootProject.name = 'discovery-service'
+include 'eureka'
+include 'gateway'

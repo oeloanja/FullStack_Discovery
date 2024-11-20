@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: loan-service
+          uri: lb://LOAN-SERVICE
+          predicates:
+            - Path=/loan/**
+        - id: loan-group-service
+          uri: lb://LOAN-GROUP-SERVICE
+          predicates:
+            - Path=/loan-group/**
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user/**
+        - id: investment-service
+          uri: lb://INVESTMENT-SERVICE
+          predicates:
+            - Path=/invest/**
+        - id: repayment-service
+          uri: lb://REPAYMENT-SERVICE
+          predicates:
+            - Path=/repayment/**
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
