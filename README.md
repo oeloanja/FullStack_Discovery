@@ -13,7 +13,6 @@ eureka:
 <br/>
 <br/>
 ```
-implementation 'org.springframework.boot:spring-boot-starter-web'
 implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 ```
 build.gradle에 위의 의존성을 추가한다.
