@@ -4,6 +4,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.10.18:8761/eureka
+  instance:
+    prefer-ip-address: true
 ```
 위의 코드를 application.yml 파일에 추가한다. <br/>
 들여쓰기 주의! server와 같은 라인으로 들어가야함 <br/>
