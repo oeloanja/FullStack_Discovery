@@ -13,23 +13,23 @@ spring:
         - id: loan-service
           uri: lb://LOAN-SERVICE
           predicates:
-            - Path=/loan/**
+            - Path=/api/v1/loans/**
         - id: loan-group-service
           uri: lb://LOAN-GROUP-SERVICE
           predicates:
-            - Path=/loan-group/**
+            - Path=/api/v1/loan_group/**
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/user/**
+            - Path=/api/v1/user_service/**
         - id: investment-service
           uri: lb://INVESTMENT-SERVICE
           predicates:
-            - Path=/invest/**
+            - Path=/api/v1/invest-service/**
         - id: repayment-service
           uri: lb://REPAYMENT-SERVICE
           predicates:
-            - Path=/repayment/**
+            - Path=/api/v1/repayment-service/**
 
       globalcors:
         corsConfigurations:
