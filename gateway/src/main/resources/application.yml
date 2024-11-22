@@ -22,6 +22,9 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/user_service/**
+#          filters:
+#            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
+#            - AddResponseHeader=Access-Control-Allow-Credentials, true
         - id: investment-service
           uri: lb://INVESTMENT-SERVICE
           predicates:
@@ -44,3 +47,9 @@ spring:
               - OPTIONS
             allowedHeaders: "*"
             allowCredentials: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
