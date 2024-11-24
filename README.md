@@ -3,7 +3,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.10.18:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
 ```
@@ -45,7 +45,7 @@ dependencyManagement {
 3. 각자 서비스 실행
 4. Discovery의 Gateway 실행
 
-**(http://192.168.10.18:8761) 에 자기 서비스 이름 올라가있나 확인**
+**(http://localhost:8761) 에 자기 서비스 이름 올라가있나 확인**
 
 <hr/>
 
