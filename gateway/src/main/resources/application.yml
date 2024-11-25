@@ -13,15 +13,15 @@ spring:
         - id: loan-service
           uri: lb://LOAN-SERVICE
           predicates:
-            - Path=/api/v1/loans/**
+            - Path=/api/v1/loan-service/**
         - id: loan-group-service
           uri: lb://LOAN-GROUP-SERVICE
           predicates:
-            - Path=/api/v1/loan_group/**
+            - Path=/api/v1/loan-group-service/**
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/user_service/**
+            - Path=/api/v1/user-service/**
 #          filters:
 #            - AddResponseHeader=Access-Control-Allow-Origin, http://localhost:3000
 #            - AddResponseHeader=Access-Control-Allow-Credentials, true
